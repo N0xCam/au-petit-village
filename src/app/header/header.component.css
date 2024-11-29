@@ -28,14 +28,14 @@
 
 @media (min-width: 992px) {
     .navColor {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
     .myLogo {
         padding-right: 2em;
         padding-left: 2em;
-    }
+    } 
     
     
 }

@@ -1,0 +1,97 @@
+.myFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1em;
+    color: #151217;
+
+}
+
+.conponentFooter {
+    background-color: #DA001E;
+    font-family: "comfortaa",sans-serif;
+}
+
+.Icons {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.X {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.navLink {
+    color: #151217;
+    font-size: 0.7em;
+    text-decoration: none;
+    display: flex;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    color: #151217;
+    font-size: 0.7em;
+}
+
+.myContact {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+
+.legal {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+small {
+    padding-top: 1em;
+    display: flex;
+    text-align: center;
+    font-size: 0.5em;
+   
+}
+
+.legalCopyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    padding-right: 1em;
+}
+
+.legalText {
+    padding-left: 0.5em;
+}
+
+.mentionsLegals {
+    padding-top: 0.2em;
+}
+
+a {
+    color:#151217;
+}
+
+@media (min-width: 992px) {
+    .navLink {
+        font-size: 1em;
+    }
+    .contactUs {
+        font-size: 1em;
+    }
+    .Icons {
+        padding-top:1.2em;
+    }
+    .X {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    small {
+        font-size: 0.7em;
+    }
+}
