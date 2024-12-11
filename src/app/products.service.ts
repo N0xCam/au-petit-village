@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
 
+
+
+export interface figurines {
+  id: number;
+  name: string;
+  desc: string;
+  price: number;
+  picture: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  products: Product [] = [
+  products: figurines [] = [
     {
       id: 1,
       name: "Figurine Assurancetourisx",
@@ -53,12 +63,13 @@ export class ProductsService {
       picture: "assets/img/prduits/figurinePanoramix.jpg",
     }
   ]
+  
   constructor() { }
-  getProducts(): Product[] {
+  getProducts(): figurines[] {
     return this.products;
   }
 
-  getProduct(id: number): Product | undefined {
+  getProduct(id: number): figurines | undefined {
     const product = this.products.find((product) => product.id === id);
     if (!product) {
       throw new Error(`Product with ID ${id} not found`);
