@@ -15,17 +15,20 @@ import { SortByPricePipe } from './sort-by-price.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProductsComponent,
+
     AboutComponent,
-    HeaderComponent,
+
     FooterComponent,
-    SortByNamePipe,
-    SortByPricePipe
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeComponent,
+    ProductsComponent,
+    HeaderComponent,
+    SortByNamePipe,
+    SortByPricePipe,
     NgbModule
   ],
   providers: [

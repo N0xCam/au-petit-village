@@ -1,0 +1,36 @@
+.titleProduct {
+    font-family: "BubbleboddyNeue", sans-serif;
+    padding-left: 0.7em;
+}
+
+.Product-card {
+    display: flex;
+    width: 50em;
+    flex-direction: row;
+}
+
+.product-card-title {
+    font-family: "BubbleboddyNeue", sans-serif;
+    font-size: 1.5em;
+}
+
+.product-card-text {
+    font-family: "comfortaa", sans-serif;
+    font-size: 1.1em;
+    width: 50em;
+}
+
+.product-price {
+    font-family: "comfortaa", sans-serif;
+    font-size: 1.1em;
+}
+
+.btn {
+    font-family: "comfortaa", sans-serif;
+    background-color:#F9D0A3;
+    color: #151217;
+    font-size: 1.1em;
+    margin-top: 1em;
+   
+
+}

@@ -1,27 +1,25 @@
-
-
 <nav class="navbar navbar-expand-lg navColor">
+
     <div class="myLogo">
+
     <img 
         src="assets/img/logoAuPetitVillage.png"
         alt="logo"
-        class="logo"
-    />
+        class="logo"/>
+        
   </div>
     <a class="navbar-brand">Au petit village</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
-      <div class="navbar-nav">
-    <a routerLink="/" class="navlink"> Accueil </a>
-    <a routerLink="/produits" class="navlink"> Produits </a>
-    <a routerLink="/a-propos" class="navlink"> À propos </a>    
-      </div>
-    </div>
+      <div class="linknav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/" class="navlink"> Accueil </a>    
+            <a href="/produits" class="navlink"> Produits </a>
+            <a href="/a-propos" class="navlink"> À propos </a>    
+          </li>
+        </ul>
+      </div>   
+      
 
 </nav>
-
-
 
 

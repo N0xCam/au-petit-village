@@ -1,37 +1,68 @@
-<h2> Présentation de l'entreprise </h2>
-<p> Développée en 2022 dans un petit village en Armorique, cette entreprise vous propose des produits basés sur la licence Astérix et Obélix.</p>
+<section class="sectionHome">
+<h2 class="titlePage"> Accueil</h2>
+<h3 class="titleHome"> Présentation de l'entreprise </h3>
+<p class="textHome"> Développée en 2022 dans un petit village en Armorique, cette entreprise vous propose des produits basés sur la licence Astérix et Obélix.</p>
+</section>
 
 
+<section class="listProducts">
+<h3 class="catalogue">Notre catalogue de produits</h3>
+  
 
-<!-- Tri des produits -->
+<!-- Trier par ordre alphabétique -->
+<div class="sort">
+<div class="sortName">
+  <input
+    type="text"
+    class="input-text"
+    placeholder="Rechercher une figurine"
+    [(ngModel)]="searchfig"/>
+</div>
 
-<!-- Produits -->
- <!-- Image du produit 1
-  Nom
-  Prix
-  Panier -->
+<!-- Trier par prix -->
+<div class="sortPrice">
+   <select
+      (change)="triFigurines($event)">
+      <option *ngFor="let option of ['asc', 'desc']" [value]="option">
+      
+      {{ option === "asc" ? "Tri par prix croissant" : "Tri par prix décroissant" }}
+      </option>
+    </select>
 
-   <!-- Image du produit 2
-  Nom
-  Prix
-  Panier -->
+</div>
+</div>
 
-   <!-- Image du produit 3
-  Nom
-  Prix
-  Panier -->
+<!-- Afficher catalogue -->
+        <div class="row figurines-list">
+          <div
+            class="col-12 col-md-4"
+            *ngFor="let figurines of products
+                | sortByPrice : order
+                | sortByName : searchfig">
+      
 
-   <!-- Image du produit 4
-  Nom
-  Prix
-  Panier -->
+                <div class="card flex-wrap">
+                  <img [src]="figurines.image"
+                  class="card-img-top" 
+                  alt="figurines.name">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ figurines.title }}</h4>
+                    <p class="card-text">{{ figurines.description }}</p>
+                    <em class="card-text">Prix: {{ figurines.price }}</em>
+                    <button
+                    type="button"
+                    class="btn"
+                    (click)="showFigurines(figurines.id)">
+                    Plus de détails
+                  </button>
+                  </div>
+                </div>
 
-   <!-- Image du produit 5
-  Nom
-  Prix
-  Panier -->
 
-   <!-- Image du produit 6
-  Nom
-  Prix
-  Panier -->
+              </div>
+            </div>
+          </section>
+ 
+ 
+ 
+  

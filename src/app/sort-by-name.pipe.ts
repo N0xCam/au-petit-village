@@ -1,18 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ProductsComponent } from "./products/products.component"
-
+import { Product } from './products.service';
 @Pipe({
-  name: 'sortByName'
+  name: 'sortByName',
+  standalone: true,
 })
 export class SortByNamePipe implements PipeTransform {
+  transform(products: Product[], searchTerm: string): Product[] {
+    if (!products || !searchTerm) {
+      return products;
+    }
 
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+      return products.filter((product) =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
   }
-
-
-}
 
 
   

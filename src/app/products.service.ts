@@ -2,74 +2,75 @@ import { Injectable } from '@angular/core';
 
 
 
-export interface figurines {
+export interface Product {
   id: number;
-  name: string;
-  desc: string;
+  image: string;
+  title: string;
+  description: string;
   price: number;
-  picture: string;
+
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  products: figurines [] = [
+  products: Product [] = [
     {
       id: 1,
-      name: "Figurine Assurancetourisx",
-      desc: "figurine du personnage Assurancetourisx",
+      title: "Figurine Assurancetourisx",
+      description: "figurine du personnage Assurancetourisx",
       price: 20,
-      picture: "assets/img/prduits/figurineAssurancetourisx.jpg",
+      image: "./assets/img/produits/figurineAssurancetourix.jpg",
     },
 
     {
       id: 2,
-      name: "Figurine Atérix",
-      desc: "figurine du personnage du célèbre Astérix",
+      title: "Figurine Astérix",
+      description: "figurine du personnage du célèbre Astérix",
       price: 44.90,
-      picture: "assets/img/prduits/figurineAsterix.webp",
+      image: "./assets/img/produits/figurineAsterix.webp",
     },
 
     {
       id: 3,
-      name: "Figurine Cléopatre",
-      desc: "figurine du personnage de l'emblématique Cléopatre",
+      title: "Figurine Cléopatre",
+      description: "figurine du personnage de l'emblématique Cléopatre",
       price: 48.99,
-      picture: "assets/img/prduits/figurineCleopatre.webp",
+      image: "./assets/img/produits/figurineCleopatre.webp",
     },
 
     {
       id: 4,
-      name: "Figurine Idéfix",
-      desc: "figurine du personnage d'Idéfix, le plus fidèle des amis de notre duo préféré",
+      title: "Figurine Idéfix",
+      description: "figurine du personnage d'Idéfix, le plus fidèle des amis de notre duo préféré",
       price: 49.90,
-      picture: "assets/img/prduits/figurineIdefix.webp",
+      image: "./assets/img/produits/figurineIdefix.webp",
     },
 
     {
       id: 5,
-      name: "Figurine Obélix",
-      desc: "figurine du personnage d'Obélix",
+      title: "Figurine Obélix",
+      description: "figurine du personnage d'Obélix",
       price: 39.90,
-      picture: "assets/img/prduits/figurineObelix.webp",
+      image: "./assets/img/produits/figurineObelix.webp",
     },
 
     {
       id: 6,
-      name: "Figurine Panoramix",
-      desc: "figurine du personnage Panoramix, le plus célèbre druide",
+      title: "Figurine Panoramix",
+      description: "figurine du personnage Panoramix, le plus célèbre druide",
       price: 20,
-      picture: "assets/img/prduits/figurinePanoramix.jpg",
+      image: "./assets/img/produits/figurinePanoramix.jpg",
     }
   ]
   
   constructor() { }
-  getProducts(): figurines[] {
+  getProducts(): Product[] {
     return this.products;
   }
 
-  getProduct(id: number): figurines | undefined {
+  getProduct(id: number): Product | undefined {
     const product = this.products.find((product) => product.id === id);
     if (!product) {
       throw new Error(`Product with ID ${id} not found`);
