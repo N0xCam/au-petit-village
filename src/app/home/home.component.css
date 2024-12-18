@@ -1,0 +1,80 @@
+.titlePage {
+    font-family: "BubbleboddyNeue", sans-serif;
+    padding-left: 0.7em;
+}
+
+.titleHome {
+    font-family: "BubbleboddyNeue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #FDD90B
+}
+
+.textHome {
+    font-family: "comfortaa", sans-serif;
+    font-size: 1.1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-card-price {
+    font-family: "comfortaa", sans-serif;
+    font-weight: bold;
+}
+
+.catalogue {
+    font-family: "BubbleboddyNeue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1em;
+    color: #FDD90B
+}
+
+.sort {
+    font-family: "comfortaa", sans-serif;
+    color: #151217;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-bottom: 1em;
+}
+
+.input-text {
+    color: #151217;
+    margin-right: 2em;
+    width: 20em;
+    height: 1.5em;
+}
+.card {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.card-title {
+    font-family: "BubbleboddyNeue", sans-serif;
+}
+
+.card-text {
+    font-family: "comfortaa", sans-serif;
+}
+
+#by {
+    font-family: "comfortaa", sans-serif;
+}
+
+.btn {
+    font-family: "comfortaa", sans-serif;
+    background-color:#F9D0A3;
+    color: #151217;
+    display: flex;
+    font-weight: bold;
+}
+
+.dropdown {
+    font-family: "comfortaa", sans-serif;
+}

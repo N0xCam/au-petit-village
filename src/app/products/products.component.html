@@ -1,32 +1,16 @@
-<h2> Nos produits </h2>>
+<h2 class="titleProduct"> Nos produits </h2>
 
-<!-- Produits -->
- <!-- Image du produit 1
-  Nom
-  Prix
-  Panier -->
+  <section *ngIf="product">
+  <div class="Product-card">
+    <img
+    src="{{ product.image }}" class="img-fluid" alt="{{ product.title }}"/>
+    <div class="card-body">
+      <h3 class="product-card-title">{{ product.title }}</h3>
+      <p class="product-card-text">{{ product.description }}</p>
+      <em class="product-price">Prix: {{ product.price }} €</em>
+      <a href="#" class="btn">Acheter</a>
 
-   <!-- Image du produit 2
-  Nom
-  Prix
-  Panier -->
-
-   <!-- Image du produit 3
-  Nom
-  Prix
-  Panier -->
-
-   <!-- Image du produit 4
-  Nom
-  Prix
-  Panier -->
-
-   <!-- Image du produit 5
-  Nom
-  Prix
-  Panier -->
-
-   <!-- Image du produit 6
-  Nom
-  Prix
-  Panier -->
+    
+    </div>
+  </div>
+</section>

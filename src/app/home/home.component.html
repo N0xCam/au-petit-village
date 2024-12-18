@@ -1,48 +1,69 @@
+<section class="sectionHome">
+<h2 class="titlePage"> Accueil</h2>
+<h3 class="titleHome"> Présentation de l'entreprise </h3>
+<p class="textHome"> Développée en 2022 dans un petit village en Armorique, cette entreprise vous propose des produits basés sur la licence Astérix et Obélix.</p>
+</section>
 
 
-<div class="HeaderComponent"></div>
-
-<div class="input-group">
-    
-      <input mdbInput type="search" id="form1" class="form-control" />
-      <label mdbLabel class="form-label" for="form1">Rechercher</label>
+<section class="listProducts">
+<h3 class="catalogue">Notre catalogue de produits</h3>
   
-    <button type="button" class="btn btn-primary">
-      <i class="fas fa-search"></i>
-    </button>
 
-<h2> Présentation de l'entreprise </h2>
+<!-- Trier par ordre alphabétique -->
+<div class="sort">
+<div class="sortName">
+  <input
+    [(ngModel)]="searchfig"
+    type="text"
+    class="input-text"
+    placeholder="Rechercher une figurine"/>
+    
+</div>
 
-<!-- Tri des produits -->
+<!-- Trier par prix -->
+<div class="sortPrice">
+   <select class="dropdown"
+      (change)="triFigurines($event)">
+      <option *ngFor="let option of ['asc', 'desc']" [value]="option">
+      
+      {{ option === "asc" ? "Tri par prix croissant" : "Tri par prix décroissant" }}
+      </option>
+    </select>
 
-<!-- Produits -->
- <!-- Image du produit 1
-  Nom
-  Prix
-  Panier -->
+</div>
+</div>
 
-   <!-- Image du produit 2
-  Nom
-  Prix
-  Panier -->
+<!-- Afficher catalogue -->
+        <div class="row figurines-list">
+          <div
+            class="col-1 col-md-3"
+            *ngFor="let figurines of products
+                | sortByPrice : order
+                | sortByName : searchfig">
+      
 
-   <!-- Image du produit 3
-  Nom
-  Prix
-  Panier -->
+                <div class="card flex-wrap">
+                  <img [src]="figurines.image"
+                  alt="figurine"
+                  class="card-img-top" >
+                  <div class="card-body">
+                    <h4 class="card-title">{{ figurines.title }}</h4>
+                    <p class="card-text">{{ figurines.description }}</p>
+                    <em class="home-card-price">Prix: {{ figurines.price }} €</em>
+                    <button
+                    type="button"
+                    class="btn"
+                    (click)="showFigurines(figurines.id)">
+                    Plus de détails
+                  </button>
+                  </div>
+                </div>
 
-   <!-- Image du produit 4
-  Nom
-  Prix
-  Panier -->
 
-   <!-- Image du produit 5
-  Nom
-  Prix
-  Panier -->
-
-   <!-- Image du produit 6
-  Nom
-  Prix
-  Panier -->
-  </div>
+              </div>
+            </div>
+          </section>
+ 
+ 
+ 
+  

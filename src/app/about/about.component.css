@@ -1,0 +1,78 @@
+.about {
+    padding-left: 1em;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleLocalisation {
+    font-family: "BubbleboddyNeue", sans-serif; 
+}
+
+.titleAbout {
+    font-family: "BubbleboddyNeue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align:start;
+}
+
+.titlePresentation {
+    font-family: "BubbleboddyNeue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1em;
+    text-decoration:solid;
+
+}
+
+.textPresentation {
+    font-family: "comfortaa", sans-serif;
+    flex-direction: column;
+    text-align:center;
+    margin-bottom: 0.2em;
+}
+
+.titleForm {
+    font-family: "BubbleboddyNeue", sans-serif;
+}
+
+.form-label {
+    font-family: "comfortaa", sans-serif;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.form-control {
+    font-family: "comfortaa", sans-serif;
+}
+
+.formSend {
+    font-family: "comfortaa", sans-serif;
+}
+
+form {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.colAbout {
+    width: 20em;
+}
+
+iframe {
+    width: 27em;
+}
+
+@media (min-width: 992px) {
+    .infos {
+        display: flex;
+       justify-content: center;
+       padding-top: 2em;
+    }
+    .colAbout {
+       padding-left:2em;
+       margin-right: 20em;
+    }
+    
+}
