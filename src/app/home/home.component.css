@@ -21,6 +21,11 @@
     text-align: center;
 }
 
+.home-card-price {
+    font-family: "comfortaa", sans-serif;
+    font-weight: bold;
+}
+
 .catalogue {
     font-family: "BubbleboddyNeue", sans-serif;
     display: flex;
@@ -39,8 +44,11 @@
     padding-bottom: 1em;
 }
 
-.input {
+.input-text {
     color: #151217;
+    margin-right: 2em;
+    width: 20em;
+    height: 1.5em;
 }
 .card {
     display: flex;
@@ -64,5 +72,9 @@
     background-color:#F9D0A3;
     color: #151217;
     display: flex;
+    font-weight: bold;
 }
 
+.dropdown {
+    font-family: "comfortaa", sans-serif;
+}

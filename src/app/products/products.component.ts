@@ -1,9 +1,8 @@
 import { Component, OnInit, LOCALE_ID } from "@angular/core";
 import { ProductsService } from "../products.service";
 import { ActivatedRoute } from "@angular/router";
-import { CommonModule, registerLocaleData } from "@angular/common";
-import localeFr from "@angular/common/locales/fr";
-registerLocaleData(localeFr);
+import { CommonModule} from "@angular/common";
+
 
 interface Figurines {
   id: number;
@@ -21,6 +20,7 @@ interface Figurines {
   styleUrl: "./products.component.css",
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
 })
+
 export class ProductsComponent implements OnInit {
   product?: Figurines;
 

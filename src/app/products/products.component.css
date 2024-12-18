@@ -18,11 +18,16 @@
     font-family: "comfortaa", sans-serif;
     font-size: 1.1em;
     width: 50em;
+    display: flex;
+    font-size:larger;
 }
 
 .product-price {
     font-family: "comfortaa", sans-serif;
     font-size: 1.1em;
+    display: flex;
+    font-size:larger;
+    font-weight: bold;
 }
 
 .btn {

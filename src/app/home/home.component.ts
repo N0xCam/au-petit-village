@@ -1,13 +1,12 @@
 import { Component, OnInit, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import localeFr from "@angular/common/locales/fr";
-import { CommonModule, registerLocaleData } from "@angular/common";
+import { CommonModule} from "@angular/common";
 import { ProductsService } from '../products.service';
 import { SortByNamePipe } from '../sort-by-name.pipe';
 import { SortByPricePipe } from '../sort-by-price.pipe';
 import { Router } from '@angular/router';
 
-registerLocaleData(localeFr);
+
 
 export interface Figurines {
   image: string;
@@ -15,7 +14,6 @@ export interface Figurines {
   title: string;
   description: string;
   price: number;
-
 }
 
 
@@ -27,6 +25,7 @@ export interface Figurines {
   styleUrl: './home.component.css',
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
 })
+
 export class HomeComponent  implements OnInit {
   products: Figurines[] = [];
   selectedProductId: number = 1;

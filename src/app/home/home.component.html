@@ -13,15 +13,16 @@
 <div class="sort">
 <div class="sortName">
   <input
+    [(ngModel)]="searchfig"
     type="text"
     class="input-text"
-    placeholder="Rechercher une figurine"
-    [(ngModel)]="searchfig"/>
+    placeholder="Rechercher une figurine"/>
+    
 </div>
 
 <!-- Trier par prix -->
 <div class="sortPrice">
-   <select
+   <select class="dropdown"
       (change)="triFigurines($event)">
       <option *ngFor="let option of ['asc', 'desc']" [value]="option">
       
@@ -35,7 +36,7 @@
 <!-- Afficher catalogue -->
         <div class="row figurines-list">
           <div
-            class="col-12 col-md-4"
+            class="col-1 col-md-3"
             *ngFor="let figurines of products
                 | sortByPrice : order
                 | sortByName : searchfig">
@@ -43,12 +44,12 @@
 
                 <div class="card flex-wrap">
                   <img [src]="figurines.image"
-                  class="card-img-top" 
-                  alt="figurines.name">
+                  alt="figurine"
+                  class="card-img-top" >
                   <div class="card-body">
                     <h4 class="card-title">{{ figurines.title }}</h4>
                     <p class="card-text">{{ figurines.description }}</p>
-                    <em class="card-text">Prix: {{ figurines.price }}</em>
+                    <em class="home-card-price">Prix: {{ figurines.price }} €</em>
                     <button
                     type="button"
                     class="btn"
